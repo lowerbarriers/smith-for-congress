@@ -1,0 +1,84 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+front: true
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 1
+  footer: 1
+  main: 1
+#  utility: 1
+meta:
+  description: "Describe your site in a sentence that entices folks to visit."
+#  image:
+#    alt: "Default social image"
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: /index.html
+#published: true
+redirect_from:
+  - /home
+#schema:
+#  type: "Thing"
+sections:
+  - freshness
+  - cta
+  - mailchimp
+#sitemap: true
+#tags: ["three", "four"]
+title: "Home"
+---
+
+<section class="layout--stripe background-color--second-light background-image--hero-home background-size--cover
+  color--third-dark text-align--center background-image-display-mobile--hide" id="home">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="What you do, in clear words"
+      classes=""
+      level="1"
+    %}
+
+    {% include atoms/spacer.html size="4" %}
+
+    <div class="display--flex layout--row justify-content--center">
+      <aside class="display--flex flex-direction--column justify-content--center">
+        <p class="font-size--2em">
+          Here you can expand slightly on the headline and generate interest.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="Elevator pitch"
+      classes="text-align--center"
+      level="2"
+    %}
+
+    {% include atoms/spacer.html size="4" %}
+
+    <div class="display--flex layout--row justify-content--center">
+      <aside class="display--flex flex-direction--column justify-content--center">
+        <p>
+          The headline and subtitle were meant to grab attention and get the visitor's interest. This section gives them
+          a payoff, with a little bit of detail on what you offer and why the user should stay.
+        </p>
+
+        <p>
+          Keep paragraphs short and breezy. There's plenty of site left to give details, prove your worth, and get your
+          visitor to buy what you're selling.
+        </p>
+
+        <p>
+          <a class="button cta" href="{{ site.subpath }}{% link collections/pages/about.html %}">More about us</a>
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,130 @@
+{
+  "color": {
+    "black": {
+      "category": "Monochrome",
+      "description": "Black or near-black, typically used for body text against a white background.",
+      "type": "color",
+      "value": "#222"
+    },
+    "grey-dark": {
+      "category": "Monochrome",
+      "description": "A dark grey used for less text contrast in places, and some light-on-dark sections",
+      "type": "color",
+      "value": "#555"
+    },
+    "grey": {
+      "category": "Monochrome",
+      "description": "A medium grey has lots of utility throughout; borders, text, everything",
+      "type": "color",
+      "value": "#aaa"
+    },
+    "grey-light": {
+      "category": "Monochrome",
+      "description": "Especially used for alternating sections with white background, but also versatile",
+      "type": "color",
+      "value": "#f7f7f7"
+    },
+    "white": {
+      "category": "Monochrome",
+      "description": "The one, the only, white.",
+      "type": "color",
+      "value": "#fff"
+    },
+    "main": {
+      "category": "Theme",
+      "description": "A medium shade of an on-brand blue, ideally. Used for links by default",
+      "type": "color",
+      "value": "#00799E"
+    },
+    "main-dark": {
+      "category": "Theme",
+      "description": "A dark shade of the main hue, used for thematic backgrounds",
+      "type": "color",
+      "value": "#002733"
+    },
+    "main-light": {
+      "category": "Theme",
+      "description": "A very light shade of the main hue, used for backgrounds primarily.",
+      "type": "color",
+      "value": "#ccf4ff"
+    },
+    "second": {
+      "category": "Theme",
+      "description": "Medium shade of what is usually a hot color like red, yellow, or orange",
+      "type": "color",
+      "value": "#E32416"
+    },
+    "second-dark": {
+      "category": "Theme",
+      "description": "A darker shade of the secondary hue",
+      "type": "color",
+      "value": "#331716"
+    },
+    "second-light": {
+      "category": "Theme",
+      "description": "A light shade of the secondary hue",
+      "type": "color",
+      "value": "#ffcfcc"
+    },
+    "third": {
+      "category": "Theme",
+      "description": "The third brand/theme color in a medium shade",
+      "type": "color",
+      "value": "#00afb9"
+    },
+    "third-dark": {
+      "category": "Theme",
+      "description": "A dark shade of the third hue",
+      "type": "color",
+      "value": "#003033"
+    },
+    "third-light": {
+      "category": "Theme",
+      "description": "A light shade of the third hue",
+      "type": "color",
+      "value": "#ccfcff"
+    },
+    "accent": {
+      "category": "Theme",
+      "description": "A special color, often a medium shade. If the brand has a purple or teal, it is great here",
+      "type": "color",
+      "value": "#6100a7"
+    },
+    "status": {
+      "category": "UI",
+      "description": "Text color for status alerts",
+      "type": "color",
+      "value": "#004085"
+    },
+    "status-background": {
+      "category": "UI",
+      "description": "Background color for status alerts",
+      "type": "color",
+      "value": "#cce5ff"
+    },
+    "warning": {
+      "category": "UI",
+      "description": "Text color for warning alerts",
+      "type": "color",
+      "value": "#856404"
+    },
+    "warning-background": {
+      "category": "UI",
+      "description": "Background color for warning alerts",
+      "type": "color",
+      "value": "#fff3cd"
+    },
+    "error": {
+      "category": "UI",
+      "description": "Text color for error alerts",
+      "type": "color",
+      "value": "#721c24"
+    },
+    "error-background": {
+      "category": "UI",
+      "description": "Background color for error alerts",
+      "type": "color",
+      "value": "#f8d7da"
+    }
+  }
+}

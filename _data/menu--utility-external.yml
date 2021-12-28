@@ -1,0 +1,13 @@
+####
+## @file
+## A menu of chiefly-external links, to be displayed in a utility-menu-like manner
+##
+## @see _includes/organisms/utility-external.html
+####
+links:
+  - href: "https://lowerbarriers.org"
+    text: "Lower Barriers"
+  - href: "https://github.com/lowerbarriers"
+    text: "LB GitHub"
+  - href: "https://github.com/lowerbarriers/resume"
+    text: "Free tech résumé"

@@ -1,0 +1,39 @@
+{
+  "name": "finished-starter",
+  "version": "1.0.0",
+  "description": "Finished starter is a complete website you can host anywhere and hack on easily",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowerbarriers/finished-starter.git"
+  },
+  "author": "Brad Czerniak",
+  "license": "MIT",
+  "homepage": "https://github.com/lowerbarriers/finished-starter",
+  "bugs": {
+    "url": "https://github.com/lowerbarriers/finished-starter/issues"
+  },
+  "scripts": {
+    "browserslist": "env BROWSERSLIST_CONFIG=./_includes/.browserslistrc browserslist",
+    "jest": "npx jest --config=.node_config/jest.config.json --verbose",
+    "prettier-css": "prettier --write 'assets/css/{theme,utility}/*.css'",
+    "prettier-js": "prettier --write 'assets/js/partials/*.js'",
+    "purgecss": "purgecss -c .node_config/purgecss.config.js -o assets/css/pre-commit-dependency.css",
+    "terser": "terser _site/assets/js/behavior.js -o assets/js/pre-commit-dependency.js"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.0"
+  },
+  "devDependencies": {
+    "browserslist": "^4.19.1",
+    "dotenv": "^8.6.0",
+    "dotenv-flow": "^3.2.0",
+    "jest": "^27.4.5",
+    "jest-json-reporter2": "^1.1.0",
+    "jest-puppeteer": "^4.4.0",
+    "lighthouse": "^7.5.0",
+    "prettier": "^2.5.1",
+    "puppeteer": "^5.5.0",
+    "purgecss": "^4.1.3",
+    "terser": "^4.6.6"
+  }
+}

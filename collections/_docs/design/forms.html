@@ -1,0 +1,97 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "The very smallest components in the design system."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Forms"
+---
+
+<p>Forms, whether standalone or called as the form collection type, can use these well-constructed components.</p>
+
+{% include forms/form--input.html
+  classes=""
+  description="Inputs can have description text."
+  label="Primary email"
+  name="email"
+  required=true
+  type="email"
+  mode="docblock"
+%}
+
+{% comment %}<!-- Only arranged this way because it's cool. -->{% endcomment %}
+{% capture states %}
+AL|Alabama, AK|Alaska, AS|American Samoa, AZ|Arizona, AR|Arkansas,
+CA|California, CO|Colorado, CT|Connecticut,
+DE|Delaware, DC|Dist of Columbia,
+FL|Florida,
+GA|Georgia, GU|Guam,
+HI|Hawaii,
+ID|Idaho, IL|Illinois, IN|Indiana, IA|Iowa,
+KS|Kansas, KY|Kentucky,
+LA|Louisiana,
+ME|Maine, MD|Maryland, MA|Massachusetts, MI|Michigan, MN|Minnesota, UM|Minor Outlying Islands, MS|Mississippi, MO|Missouri, MT|Montana,
+NE|Nebraska, NV|Nevada, NH|New Hampshire, NJ|New Jersey, NM|New Mexico, NY|New York, NC|North Carolina, ND|North Dakota, MP|Northern Mariana Islands,
+OH|Ohio, OK|Oklahoma, OR|Oregon,
+PA|Pennsylvania, PR|Puerto Rico,
+RI|Rhode Island,
+SC|South Carolina, SD|South Dakota,
+TN|Tennessee, TX|Texas,
+UT|Utah,
+VT|Vermont, VA|Virginia, VI|U.S. Virgin Islands,
+WA|Washington, WV|West Virginia, WI|Wisconsin, WY|Wyoming
+{% endcapture %}
+
+{% include forms/form--select.html
+  classes=""
+  description="A single select uses a dropdown."
+  label="Favorite state"
+  multiple=false
+  name="states"
+  options=states
+  required=false
+  mode="docblock"
+%}
+
+{% include forms/form--select.html
+  classes=""
+  description="Users do not love default multi-selects, so this uses checkboxes."
+  label="Favorite states"
+  multiple=true
+  name="states"
+  options=states
+  required=false
+  mode="docblock"
+%}
+
+{% include forms/form--yes-no.html
+  classes=""
+  default=false
+  description="Will you attend the wedding reception dinner on October 9, 2020?"
+  label="Répondez s'il vous plaît"
+  label_off="With regret"
+  label_on="Looking forward to it!"
+  name="rsvp"
+  required=false
+  mode="docblock"
+%}
+
+{% include forms/form--textarea.html
+  classes=""
+  description="Questions, dietary info, well-wishes, <em>your single greatest piece of advice besides wash-your-hands and wear-sunscreen</em>."
+  label="Commentary"
+  name="comment"
+  required=false
+  rows="4"
+  mode="docblock"
+%}

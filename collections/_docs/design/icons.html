@@ -1,0 +1,140 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+meta:
+  description: "The very smallest components in the design system."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+  robots: "noindex,follow"
+#  title: "Overrides the tab title and social titles"
+#permalink: docs/path/page-title/
+#published: true
+#tags: ["three", "four"]
+title: "Icons"
+---
+
+<p>The framework comes with octicons, simple-icons, and a directory for 'other'.</p>
+
+{% include atoms/heading.html
+  children="Octicons"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.octicons.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/octicons/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/octicons/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="octicons"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Simple Icons"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.simple-icons.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/simple-icons/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/simple-icons/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="simple-icons"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include atoms/heading.html
+  children="Other"
+  level="2"
+%}
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Filename</th>
+      <th>Full path</th>
+      <th>Include code</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign icons = site.data.icons.other.files | sort %}
+    {% for icon in icons %}
+      <tr>
+        <td>
+          <figure class="figure figure--icon">
+            {% include icons/other/{{ icon }} %}
+          </figure>
+        </td>
+        <td>{{ icon }}</td>
+        <td><code>_includes/icons/other/{{ icon }}</code></td>
+        <td>
+          <code><pre>
+            {% raw %}
+              {% include atoms/icon.html
+                library="other"
+                symbol="{% endraw %}{{ icon | remove: ".svg" }}{% raw %}"
+              %}
+            {% endraw %}
+          </pre></code>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

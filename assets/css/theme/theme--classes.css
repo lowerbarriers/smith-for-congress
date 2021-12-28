@@ -1,0 +1,594 @@
+/**
+ * @file
+ * Component and class-level styles.
+ */
+
+/**
+ * Skip-to-main-content links for accessibility.
+ */
+.a11y--skip-hide {
+  background: var(--color--main-dark);
+  position: relative;
+  text-align: center;
+}
+.a11y--skip-hide a {
+  color: var(--color--white);
+  display: block;
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  padding: 10px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+.a11y--skip-hide a:focus {
+  height: auto;
+  outline: 0 none;
+  position: static;
+  width: auto;
+}
+
+/**
+ * Alerts.
+ */
+.alert {
+  border: 1px solid;
+  border-radius: var(--border-radius--default);
+  font-style: italic;
+  margin: 10px 0;
+  padding: 10px;
+}
+.alert a {
+  color: inherit;
+  font-weight: 600;
+}
+.alert p:first-of-type {
+  margin-top: 0;
+}
+.alert--error {
+  background-color: var(--color--error-background);
+  color: var(--color--error);
+}
+.alert--status {
+  background-color: var(--color--status-background);
+  color: var(--color--status);
+}
+.alert--warning {
+  background-color: var(--color--warning-background);
+  color: var(--color--warning);
+}
+
+/**
+ * Background images and gradients.
+ */
+.background-image--gradient--main {
+  background-image: linear-gradient(
+    -5deg,
+    transparent 50%,
+    var(--color--main) 200%
+  );
+}
+.background-image--gradient--second {
+  background-image: linear-gradient(
+    -5deg,
+    transparent 50%,
+    var(--color--second) 200%
+  );
+}
+.background-image--gradient--third {
+  background-image: linear-gradient(
+    -5deg,
+    transparent 50%,
+    var(--color--third) 200%
+  );
+}
+.background-image--gradient--accent {
+  background-image: linear-gradient(
+    -5deg,
+    transparent 50%,
+    var(--color--accent) 200%
+  );
+}
+.background-image--hero-home {
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  min-height: 50vw; /* Roughly the aspect ratio. */
+}
+.webp--disabled .background-image--hero-home {
+  background-image: url("../images/in-css/hero-home.jpg");
+}
+.webp--enabled .background-image--hero-home {
+  background-image: url("../images/in-css/hero-home.jpg.webp");
+}
+.background-image--hero-standout {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.webp-disabled .background-image--hero-standout {
+  background-image: url("../images/in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg");
+}
+.webp-enabled .background-image--hero-standout {
+  background-image: url("../images/in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg.webp");
+}
+
+/**
+ * Effects based on scroll.
+ */
+.body-scroll--up {
+}
+.body-scroll--up .fab {
+  bottom: -200px;
+}
+
+/**
+ * Add stylistic pipes to lists.
+ */
+.border-spaced {
+}
+.border-spaced > li {
+  border-bottom: 1px solid;
+}
+.border-spaced li:last-child {
+  border-bottom: 0 none;
+}
+@media all and (min-width: 768px) {
+  .border-spaced > li {
+    border-right: 1px solid;
+    border-bottom: 0 none;
+  }
+  .border-spaced li:last-child {
+    border-right: 0 none;
+  }
+}
+
+/**
+ * Browser upgrade prompt for any version of IE.
+ *
+ * Omitting Custom Props here since IE does not support them.
+ */
+.browserupgrade {
+  background-color: #1d3141;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  text-align: left;
+}
+.browserupgrade a:link,
+.browserupgrade a:visited {
+  color: #fafafa;
+  text-decoration: underline;
+}
+.browserupgrade a:hover,
+.browserupgrade a:hover,
+.browserupgrade a:hover {
+  color: #ffc227;
+}
+.browserupgrade > p {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/**
+ * Inverted "ghost" buttons (anti-pattern, but common).
+ *
+ * @see ../utility/utility--color.css for the background-to-border conversion.
+ */
+.button--ghost {
+  background-color: var(
+    --color--white
+  ); /* Could be transparent depending on theme. */
+  border: 1px solid;
+}
+.button--ghost:hover {
+  color: var(--color--grey-dark);
+}
+
+/**
+ * Cards (teasers).
+ */
+.card {
+  border: var(--border--default);
+  border-radius: var(--border-radius--default);
+  box-shadow: var(--box-shadow--default);
+  transition: var(--transition--default);
+}
+.card figure,
+.card figure img {
+  border-top-left-radius: var(--border-radius--default);
+  border-top-right-radius: var(--border-radius--default);
+  margin-bottom: 0;
+  transition: var(--transition--default);
+}
+.card h3 {
+  margin-bottom: calc(1.5 * var(--spacing--single));
+}
+.card h3 > a {
+  text-decoration: underline;
+}
+.card h3 + strong {
+  margin-bottom: calc(1.5 * var(--spacing--single));
+  margin-top: calc(-1 * var(--spacing--single));
+}
+.card picture {
+  overflow: hidden;
+}
+.card--hover:hover,
+.card--hover:active,
+.card--hover:focus-within {
+  border-style: dot-dash;
+}
+.card--hover figure img {
+  transition-property: transform;
+  will-change: transform;
+}
+.card--hover:hover figure img,
+.card--hover:active figure img,
+.card--hover:focus-within figure img {
+  transform: scale(1.125);
+}
+.card--hover:focus-within h3 > a {
+  text-decoration: underline dashed;
+}
+
+/**
+ * The page-bottom copyright section.
+ */
+.copyright {
+}
+.copyright p {
+  max-width: none;
+}
+
+/**
+ * GDPR Cookie disclosure dialog (fixed to bottom of screen).
+ */
+.dialog--cookie-disclosure {
+  box-shadow: 0 -2px 6px rgba(128, 128, 128, 0.9);
+}
+
+/**
+ * Docblocks, the example containers for components.
+ */
+.docblock {
+  margin: 0 0 calc(4 * var(--spacing--single));
+}
+.docblock--example {
+  border: 1px dashed;
+  padding: calc(2 * var(--spacing--single));
+}
+
+/**
+ * Docs sidebar for navigating documentation.
+ */
+.docs-sidebar {
+}
+.docs-sidebar a.active {
+  font-style: italic;
+  text-decoration: underline dashed;
+}
+@media all and (min-width: 1440px) {
+  .has--docs-sidebar > .layout--stripe--inner {
+    margin-left: 360px;
+  }
+  .docs-sidebar {
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    width: 360px;
+  }
+}
+
+/**
+ * Icons.
+ *
+ * By default set icon wrappers to a character wide and high.
+ */
+.figure--icon {
+  height: 1.25ch;
+  vertical-align: top;
+  width: 1.25ch;
+}
+.figure--icon > svg {
+  fill: currentColor;
+}
+
+/**
+ * Footnotes, as generated by the kramdown engine.
+ *
+ * Since we can't add classes to every instance, we have to declaratively style the single footnotes class.
+ */
+.footnotes {
+  background-color: var(--color--grey-light);
+  border: 2px solid var(--color--grey);
+  color: var(--color--black);
+  font-size: 0.875em;
+  margin-top: calc(4 * var(--spacing--single));
+  padding: calc(2 * var(--spacing--single));
+}
+.footnotes::before {
+  content: var(--content--footnotes);
+  font-weight: 900;
+}
+
+/**
+ * Forms and form elements.
+ */
+.form {
+}
+.form--item:not([class*="flex--"]) + .form--item:not([class*="flex--"]) {
+  margin-top: calc(2 * var(--spacing--single));
+}
+.form--item--select--multiple
+  .form--item:not([class*="flex--"])
+  + .form--item:not([class*="flex--"]) {
+  margin-top: calc(0.25 * var(--spacing--single));
+}
+.form--item--description {
+  font-size: 0.75em;
+}
+.form--item--checkbox.position--relative > label,
+.form--item--radio.position--relative > label {
+  border: var(--border--default);
+  border-radius: var(--border-radius--default);
+  box-shadow: var(--box-shadow--default);
+  cursor: pointer;
+  transition: var(--transition--default);
+}
+.form--item--checkbox.position--relative > label:hover,
+.form--item--checkbox.position--relative > label:active,
+.form--item--checkbox.position--relative > label:focus-within,
+.form--item--checkbox.position--relative > input:checked + label,
+.form--item--radio.position--relative > label:hover,
+.form--item--radio.position--relative > label:active,
+.form--item--radio.position--relative > label:focus-within,
+.form--item--radio.position--relative > input:checked + label {
+  border-style: dot-dash;
+}
+.form--item--checkbox.position--relative > label,
+.form--item--radio.position--relative > label {
+  padding-left: calc(3 * var(--spacing--single));
+  padding-right: calc(1 * var(--spacing--single));
+}
+.form--item--checkbox.position--relative > input,
+.form--item--radio.position--relative > input {
+  left: calc(1 * var(--spacing--single));
+  position: absolute;
+  top: calc(50% - 7px); /* Magic number guess for OS radio size. */
+  z-index: 2;
+}
+
+/**
+ * Specificity override for gallery item margins.
+ */
+.gallery-item {
+}
+.text-align--center figure.gallery-item {
+  margin: 0 auto calc(4 * var(--spacing--single));
+}
+
+/**
+ * Site header and its elements.
+ */
+.header {
+}
+.header--logo {
+  text-decoration: none;
+}
+
+/**
+ * YouTube embeds, faked to look like iframes as much as possible.
+ */
+.include--molecule--youtube {
+  position: relative;
+}
+.include--molecule--youtube::before {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  color: var(--color--white);
+  content: attr(data-title);
+  cursor: pointer;
+  display: block;
+  left: 0;
+  padding: calc(2 * var(--spacing--single));
+  position: absolute;
+  right: 0;
+  text-shadow: var(--text-shadow--default);
+  top: 0;
+  z-index: 2;
+}
+.include--molecule--youtube::after {
+  background-image: url("../images/in-css/youtube.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: calc(50% - calc(3.4 * var(--spacing--single)));
+  content: "";
+  cursor: pointer;
+  display: block;
+  padding: calc(3.4 * var(--spacing--single));
+  position: absolute;
+  right: calc(50% - calc(3.4 * var(--spacing--single)));
+}
+.include--molecule--youtube:hover::after {
+  background-color: #f00;
+}
+
+/**
+ * Dismissible elements.
+ */
+.js--dismissible {
+  min-height: 35px; /* Magic number because of the button height below. */
+  padding-right: 55px !important; /* Magic number because of the button width below. */
+}
+.js--dismissible--close {
+  background-color: transparent;
+  color: currentColor;
+  margin: 0;
+  padding: calc(0.75 * var(--spacing--single)) calc(1 * var(--spacing--single));
+  position: absolute;
+  right: calc(1 * var(--spacing--single));
+  top: calc(50% - 17.5px);
+}
+
+/**
+ * Rudimentary lightbox.
+ */
+.js--event--click {
+  cursor: pointer;
+  transition: var(--transition--default);
+}
+
+/**
+ * Toggle below (Open/Close below) buttons.
+ */
+.js--toggle-below {
+}
+.js .js--toggle-below--closed {
+  display: none;
+}
+
+/**
+ * Markdown-processed text.
+ */
+.markdownified {
+}
+
+/**
+ * Menus.
+ */
+.menu {
+}
+.menu-item {
+  margin: calc(0.5 * var(--spacing--single)) 0
+    calc(0.5 * var(--spacing--single)) calc(0.5 * var(--spacing--single));
+  padding-right: calc(0.5 * var(--spacing--single));
+}
+.menu-item > a {
+  color: inherit;
+  display: block;
+  margin: 0 auto;
+  max-width: calc(var(--layout--content-area) / 5);
+  padding: calc(2 * var(--spacing--single)) calc(2 * var(--spacing--single));
+}
+.color--white .menu-item > a:hover,
+.color--white .menu-item > a:active,
+.color--white .menu-item > a.active,
+.color--white .menu-item > a:focus {
+  background-color: var(--color--second);
+  font-weight: 700;
+  text-decoration: underline dashed var(--color--grey-light);
+}
+@media all and (min-width: 768px) {
+  .menu-layout--horizontal {
+    text-align: center;
+  }
+}
+
+/**
+ * Color palette boxes for the moodboards and style guide.
+ */
+.palette {
+  border: 1px solid var(--color--grey);
+  min-height: calc(10 * var(--spacing--single));
+  min-width: calc(10 * var(--spacing--single));
+}
+
+/**
+ * Make lazy loaded images transition all for perceived performance.
+ */
+.picture--lazy-load {
+  transform: scale(1, 0);
+  transition: var(--transition--default);
+}
+.picture--lazy-load--loaded {
+  transform: scale(1, 1);
+}
+
+/**
+ * Add stylistic pipes to lists.
+ */
+@media all and (min-width: 768px) {
+  .pipe-spaced {
+  }
+  .pipe-spaced > li::after {
+    content: "|";
+    display: inline-block;
+    font-weight: 300;
+    opacity: 0.9;
+    padding: 0 2px;
+    vertical-align: middle;
+  }
+  .pipe-spaced > li:last-child::after {
+    display: none;
+  }
+}
+
+/**
+ * The search widget in the header.
+ */
+.search-widget {
+}
+.search-widget form {
+  max-width: calc(100vw - (4 * var(--spacing--single)));
+  right: calc(-12 * var(--spacing--single));
+  width: calc(24 * var(--spacing--single));
+}
+@media all and (min-width: 768px) {
+  .search-widget form {
+    right: 0;
+  }
+}
+.button--search-widget--submit {
+  background-color: var(--color--accent);
+  box-shadow: none;
+  margin: 0;
+  padding: calc(0.5 * var(--spacing--single)) calc(0.5 * var(--spacing--single));
+}
+.button--search-widget--toggle {
+  line-height: var(--line-height--heading);
+  margin: 0;
+  padding: calc(0.5 * var(--spacing--single)) calc(0.5 * var(--spacing--single));
+}
+.button--search-widget--toggle > svg {
+  fill: var(--color--white);
+  margin: 0;
+}
+.button--search-widget--toggle[aria-expanded="true"] > svg {
+  fill: var(--color--second-light);
+}
+
+/**
+ * Social links.
+ */
+.social {
+}
+.social a {
+  display: block;
+  margin: 0 calc(0.5 * var(--spacing--single))
+    calc(0.5 * var(--spacing--single)) 0;
+  min-height: 48px;
+  min-width: 48px;
+}
+.social a:hover,
+.social a:active,
+.social a:focus-within {
+  color: var(--color--second-light);
+}
+
+/**
+ * Initial "top" state for the main nav, to allow for transitions via body-scroll--
+ */
+.sticky--top {
+  position: static;
+  top: -300px; /* Need a set negative position taller than the nav but not huge for transition */
+  transition: var(--transition--default);
+}
+@media all and (min-width: 1024px) {
+  .body-scroll--up .sticky--top {
+    box-shadow: 0 2px 6px rgba(128, 128, 128, 0.9);
+    position: sticky;
+    top: 0;
+    transition: var(--transition--default);
+    z-index: 8;
+  }
+}

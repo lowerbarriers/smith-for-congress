@@ -1,0 +1,55 @@
+---
+authors:
+  - brad-czerniak
+#categories: ["one", "two"]
+#date: 2020-03-03 02:02:02
+#hero_classes: "background-color--main-dark color--white"
+menus:
+#  copyright: 2
+#  footer: 3
+#  main: 3
+  utility: 2
+meta:
+  description: "What we've been asked, and what we say when asked."
+#  image:
+#    alt: "Default social image" # It's okay for this to be empty if the image is decorative
+#    src: required/meta-image--default.jpg
+#  robots: "index,follow"
+#  title: "Overrides the tab title and social titles"
+permalink: /faq/
+#published: true
+#schema:
+#  type: "Thing"
+#sections:
+#  - cta
+#sitemap: true
+#tags: ["three", "four"]
+title: "Frequently asked questions"
+---
+
+<section class="layout--stripe">
+  <div class="layout--stripe--inner">
+    {% include atoms/heading.html
+      children="All questions"
+      classes="text-align--center "
+      level="2"
+    %}
+
+    <p>Thank you for visiting the site. Below are answers to some support questions we've received, in case they may be
+      helpful to you as well.</p>
+
+    {% include atoms/spacer.html size="2" %}
+
+    {% include molecules/accordion.html
+      classes=""
+      children="<p>We feel strongly that Taco Bell should bring back the Mexican pizza combo. Two tacos supreme, please.</p>"
+      title="Where does your organization stand politically?"
+    %}
+
+    {% include molecules/accordion.html
+      classes=""
+      children="<p>You bet! Just go to <a href='https://github.com/lowerbarriers/finished-starter'>finished-starter</a> and follow the easy instructions</p>"
+      title="Can I have a site just like yours?"
+    %}
+  </div>
+</section>
