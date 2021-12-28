@@ -34,61 +34,61 @@
       "category": "Theme",
       "description": "A medium shade of an on-brand blue, ideally. Used for links by default",
       "type": "color",
-      "value": "#00799E"
+      "value": "#005ef5"
     },
     "main-dark": {
       "category": "Theme",
       "description": "A dark shade of the main hue, used for thematic backgrounds",
       "type": "color",
-      "value": "#002733"
+      "value": "#002868"
     },
     "main-light": {
       "category": "Theme",
       "description": "A very light shade of the main hue, used for backgrounds primarily.",
       "type": "color",
-      "value": "#ccf4ff"
+      "value": "#c2d9ff"
     },
     "second": {
       "category": "Theme",
       "description": "Medium shade of what is usually a hot color like red, yellow, or orange",
       "type": "color",
-      "value": "#E32416"
+      "value": "#bf0a30"
     },
     "second-dark": {
       "category": "Theme",
       "description": "A darker shade of the secondary hue",
       "type": "color",
-      "value": "#331716"
+      "value": "#610519"
     },
     "second-light": {
       "category": "Theme",
       "description": "A light shade of the secondary hue",
       "type": "color",
-      "value": "#ffcfcc"
+      "value": "#fcc5d1"
     },
     "third": {
       "category": "Theme",
       "description": "The third brand/theme color in a medium shade",
       "type": "color",
-      "value": "#00afb9"
+      "value": "#28a0cb"
     },
     "third-dark": {
       "category": "Theme",
       "description": "A dark shade of the third hue",
       "type": "color",
-      "value": "#003033"
+      "value": "#114355"
     },
     "third-light": {
       "category": "Theme",
       "description": "A light shade of the third hue",
       "type": "color",
-      "value": "#ccfcff"
+      "value": "#cceaf5"
     },
     "accent": {
       "category": "Theme",
       "description": "A special color, often a medium shade. If the brand has a purple or teal, it is great here",
       "type": "color",
-      "value": "#6100a7"
+      "value": "#fa9441"
     },
     "status": {
       "category": "UI",

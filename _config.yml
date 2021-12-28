@@ -18,7 +18,7 @@
 
 ## Technical site info
 #baseurl: "" # This is better empty
-subpath: "/finished-starter" # Could be a subsite of a domain at a path, ex. "/sub-site"
+subpath: "/smith-for-congress" # Could be a subsite of a domain at a path, ex. "/sub-site"
 #google_analytics: UA-697953-3 # The UA- code provided by GA
 
 ## The option below lets you choose between having Jekyll process and minify your CSS and JS (good enough), or adding a
@@ -33,10 +33,10 @@ filament_load_css: "false" # Use the https://www.filamentgroup.com/lab/load-css-
 #content_security_policy: "default-src 'self'; script-src 'self' 'unsafe-inline'"
 
 ## Basic site info
-title: "finished-starter"
+title: "Jane Smith for Congress"
 primary_author: "Lower Barriers" # This is shown in the copyright statement in the footer of the site.
-shortname: fin-start
-tagline: "A website, not a project"
+shortname: smithcon
+tagline: "Representing West Dakota's 33rd District"
 
 ## Site and contact bits
 email: helper@lowerbarriers.org
@@ -69,7 +69,7 @@ social:
       library: simple-icons
       symbol: twitter
   - title: GitHub
-    url: https://github.com/lowerbarriers/finished-starter
+    url: https://github.com/lowerbarriers/smith-for-congress
     icon:
       library: simple-icons
       symbol: github
@@ -92,7 +92,7 @@ html:
 
 ## Standard <meta> tags for SEO, etc.
 meta:
-  description: "finished-starter is the best free website on the market."
+  description: "Jane Smith is your next congressperson."
   generator: "[Jekyll](https://github.com/mojombo/jekyll)"
   image:
     alt: "Site default social image" # It's okay for this to be an empty string if the image is decorative
@@ -153,7 +153,6 @@ snipcart:
 preload:
   image:
     - "in-css/hero-home.jpg.webp"
-    - "in-css/eric-prouzet-tD49mqo7sjE-unsplash.jpg.webp"
     - "required/s.gif.webp"
   style:
     - "pre-commit-dependency.css"

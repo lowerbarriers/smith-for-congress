@@ -373,7 +373,9 @@
  */
 .header {
 }
-.header--logo {
+.header--logo,
+.header--logo:visited {
+  color: var(--color--main-dark);
   text-decoration: none;
 }
 
